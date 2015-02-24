@@ -3,10 +3,6 @@
 
 /* old site styling */
 
-body {
-  font-family: Verdana;
-}
-
 .wrapper {
   width: 80%;
   padding: 20px;
@@ -53,62 +49,6 @@ body {
 
 .center img {
   margin: 10px 50px 10px 10px;
-}
-
-.banner {
-  background: url('/images/logo.png') no-repeat left top;
-  padding: 20px 0px 0px 400px;
-  width: 100%;
-  height: 100px;
-}
-
-.banner a {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 20px;
-}
-
-.banner a:hover {
-  background-color: #000000;
-}
-
-.title {
-  width: 100%;
-  color: #ffffff;
-  background-color: #000000;
-  margin: -16px -5px 0px -8px;
-  border: 0px;
-}
-
-.title h1 {
-  font-size: 72px;
-  margin: 0px;
-  padding: 0px;
-}
-
-.main {
-  width: 100%;
-  margin: -16px -5px 0px -8px;
-  padding: 20px;
-  border: 0px;
-  xbackground-color: #ffffff;
-}
-
-li.home {
-  width: 200px;
-}
-
-.footer {
-  width: 100%;
-  margin: -16px -5px 0px -8px;
-  border: 0px;
-  background-color: #000000;
-}
-
-.center-section {
-  xwidth: 980px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 ul {
