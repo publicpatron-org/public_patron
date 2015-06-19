@@ -1,3 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.img-responsive {
+  width: 100% \9;
+}
