@@ -1,21 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
-  <title>Home | Public Patron</title>
-</head>
+  <%= render 'layouts/head' %>
 
-<body>
-  <div class="container">
-    <img src="https://s3.amazonaws.com/public-patron/LOGO-PNG3.png" class="img-responsive" alt="Responsive image">      
-    <h1>A Movement to Free Culture & Disrupt Big Media by Supporting Creators Directly</h1>
-    <p>We are in the middle of a transition, toward all media being distributed over the internet - music, movies, radio, television. It is this shift that provides an opportunity to better serve the interests of creators and the fans of their work, as well as to advance creative freedom and public access to culture and knowledge.</p>
-    <p>The internet allows everyone to distribute the media they create to the whole world. No labels, studios, broadcasting stations or cable companies are necessary. You just post the files on your own site and you're done. A little more work and you can make a live show or one that downloads new episodes quickly and automatically. There is really no need to make a deal with companies like Netflix, iTunes, YouTube, or Spotify to get your work out there.</p>
-    <p>Still supporting yourself while making that media remains difficult. That's what really drives many creators to working with advertisers or one of those new distribution services. But that relationship requires following all of their rules - which can include inserting ads, losing creative control or having to limit access to your content, now or in the future. You might even have to give up ownership of your work completely. And as these new services become virtual monopolies, almost all creators will be left little choice but to accept smaller returns while these networks get rich off of their content. Then there is still the problem of piracy.</p>
-    <p>From the public's perspective, this new digital media world is better but it still sucks. Commercials haven't gone away, and they're getting harder to skip. You're left searching for content spread over different services with conflicting limits on how, where and when you can consume it. You have to worry about your hardware, software, and multiple paid accounts. And just because you have access to something today doesn't mean it will be available or play correctly tomorrow, even if you bought it outright. Finally, that real connection we want with artists is too often twisted by distributors and advertisers, who demand changes to content for economic or personal reasons.</p>
-    <p>We can solve these problems and serve the public good with a people-powered movement built on a new platform. The promise of our technology is to simply automate individual donations to creators in exchange for their work being made freely available on the web. We insure that creators get paid a percentage of your monthly donation based on the time you spend consuming their content. That's it. We don't get involved in distribution. Our vision is that just changing how we pay for our media can create a cultural shift - that as more people donate and creators see the real economic and artistic benefits of our alternative, not only will the old business models of media start to crumble, but popular culture will have the freedom to improve. And everyone will have access to information and art without the limits usually imposed by governments, corporate networks and advertisers.</p>
-    <p>Please join us and support the people who make the stuff you love.</p>
-  </div>
-</body>
+  <body>
 
+    <%= render 'layouts/header' %>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <img src="https://s3.amazonaws.com/public-patron/LOGO-PNG3.png" class="img-responsive" alt="Responsive image"> 
+        <h1>A MOVEMENT TO FREE CULTURE + <span class="jumbotext1">DISRUPT BIG MEDIA</span> BY SUPPORTING <span class="jumbotext2">CREATORS DIRECTLY</span></h1>
+        <!-- <p><a class="btn btn-primary btn-lg" href="about" role="button">Learn more &raquo;</a></p> -->
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>For the Creators</h2>
+          <p>Artists want the freedom to express themselves. Journalists and educators want to honestly relay facts and ideas. The web allows access to an infinite audience. We see the potential to let them all be successful without having to compromise their independence.</p>
+          <p><a class="btn btn-default" href="/static_pages/the_big_idea" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>For Consumers</h2>
+          <p>The internet is giving us access to the world's media. But new companies see this only as the latest opportunity to get their piece of the pie. And instead of getting the best consumer experience, systems are built only to make them the most money.  There is a better way. </p>
+          <p><a class="btn btn-default" href="/static_pages/the_big_idea" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>For the Common Good</h2>
+          <p>To truly move society forward, the world needs free access to information and cultural democracy. We require the independence to develop the best ideas and the freedom to share them globally, without corporate or governmental oversight. The time has come.</p>
+          <p><a class="btn btn-default" href="/static_pages/the_big_idea" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+  <%= render 'layouts/footer' %>
+
+  <%= render 'layouts/endJS' %>
+
+  </body>
 </html>
