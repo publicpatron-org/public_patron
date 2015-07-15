@@ -1,32 +1,39 @@
       <footer id="footer">
         <div class="container">
           <div class="col-md-4">
-            <h1 class="text-muted">Public Patron</h1>
-            <p class="text-muted">a movement to free culture<br>+ disrupt big media by<br>supporting creators directly</p>
+            <%= link_to image_tag("https://s3.amazonaws.com/public-patron/LOGO-TRANSPARENT-WHITE.png", :alt => "Public Patron", :class => "navbar-brand" ), root_path %>
           </div>
           <div class="col-md-2">
             <h3>Vision</h3>
-            <p>Big Picture</p>
-            <p>Creators</p>
-            <p>Consumers</p>
-            <p>Public Good</p>
+            <ul>
+            <li><%= link_to "Big Picture", idea_path %></li>
+            <li><%= link_to "Creators", idea_path %></li>
+            <li><%= link_to "Consumers", idea_path %></li>
+            <li><%= link_to "Public Good", idea_path %></li>
+            </ul>
           </div>
           <div class="col-md-2">
             <h3>Organization</h3>
-            <p>About Us</p>
-            <p>Documents</p>
-            <p>Contact Us</p>
+            <ul>
+              <li><%= link_to "About Us", about_path %></li>
+              <li><%= link_to "Documents", about_path %></li>
+              <li><%= link_to "Contact Us", about_path %></li>
+            </ul>
           </div>
           <div class="col-md-2">
             <h3>Platform</h3>
-            <p>Technology</p>
-            <p>FAQ</p>
+            <ul>
+            <li><%= link_to "Technology", platform_path %></li>
+            <li><%= link_to "FAQ", platform_path %></li>
+            </ul>
           </div>
           <div class="col-md-2">
             <h3>Support</h3>
-            <p>Join Us</p>
-            <p>Donate</p>
-            <p>Merch</p>
+            <ul>
+            <li><%= link_to "Join Us", join_path %></li>
+            <li><%= link_to "Donate", support_path %></li>
+            <li><%= link_to "Merch", support_path %></li>
+            </ul>
           </div>
         </div>
       </footer>
