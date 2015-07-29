@@ -1,21 +1,21 @@
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <header class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a class="navbar-brand" href="#"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <nav class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="<%= yield(:nav1) %>"><%= link_to "THE BIG IDEA", idea_path, class: "navbar-brand" %></li>
-            <li class="<%= yield(:nav2) %>"><%= link_to "HOW IT WORKS", platform_path, class: "navbar-brand" %></li>
-            <li class="<%= yield(:nav3) %>"><%= link_to "WHO WE ARE", about_path, class: "navbar-brand" %></li>
-            <li class="<%= yield(:nav4) %>"><%= link_to "JOIN THE MOVEMENT", join_path, class: "navbar-brand" %></li>
-            <li class="<%= yield(:nav5) %>"><%= link_to "SUPPORT US", support_path, class: "navbar-brand" %></li>
+            <li class="<%= yield(:nav1) %>"><%= link_to "THE BIG IDEA", idea_path %></li>
+            <li class="<%= yield(:nav2) %>"><%= link_to "HOW IT WORKS", platform_path %></li>
+            <li class="<%= yield(:nav3) %>"><%= link_to "WHO WE ARE", about_path %></li>
+            <li class="<%= yield(:nav4) %>"><%= link_to "JOIN THE MOVEMENT", join_path %></li>
+            <li class="<%= yield(:nav5) %>"><%= link_to "SUPPORT US", support_path %></li>
             <!--
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -57,6 +57,6 @@
             </li>
           </ul>
           -->
-        </div><!--/.navbar-collapse -->
+        </nav><!--/.navbar-collapse -->
       </div><!-- /.container -->
-    </nav>
+    </header>

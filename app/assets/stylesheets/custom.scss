@@ -1,15 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.navbar-header {
-  img {
-    margin-top: -10px;
-  }
-}
+$test-color: #777;
 
-h1, h2 {
-  padding: 20px 0px 10px 0px;
-}
+$navbar-inverse-link-active-bg: darken($navbar-inverse-bg, 0%);
 
 p {
   font-size: 16px;
@@ -20,7 +14,6 @@ p {
 
 .jumbotron {
   background-color: #000000;
-  color: #ffffff;
   img {
     float: left;
     width: 60%;
@@ -41,14 +34,22 @@ p {
   }
 }
 
+.container .details {
+  padding-bottom: 310px;
+}
+
+.container .row {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
 #footer {
   background-color: #222222;
   color: #ffffff;
-  padding: 20px 0px 20px 0px;
+  padding: 15px 0px 20px 0px;
   img {
-    margin: 20px;
-    width: 280px;
-    height: 135px;
+    margin: 30px 20px 30px 10px;
+    width: 80%; 
   }
   ul, ul li {
     list-style-type: none;

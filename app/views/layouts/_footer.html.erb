@@ -1,38 +1,42 @@
       <footer id="footer">
         <div class="container">
           <div class="col-md-4">
-            <%= link_to image_tag("https://s3.amazonaws.com/public-patron/LOGO-TRANSPARENT-WHITE.png", :alt => "Public Patron", :class => "navbar-brand" ), root_path %>
+            <%= link_to image_tag("https://s3.amazonaws.com/public-patron/LOGO-TRANSPARENT-WHITE.png", :alt => "Public Patron" ), root_path %>
           </div>
           <div class="col-md-2">
             <h3>Vision</h3>
             <ul>
-            <li><%= link_to "Big Picture", idea_path %></li>
-            <li><%= link_to "Creators", idea_path %></li>
-            <li><%= link_to "Consumers", idea_path %></li>
-            <li><%= link_to "Public Good", idea_path %></li>
-            </ul>
-          </div>
-          <div class="col-md-2">
-            <h3>Organization</h3>
-            <ul>
-              <li><%= link_to "About Us", about_path %></li>
-              <li><%= link_to "Documents", about_path %></li>
-              <li><%= link_to "Contact Us", about_path %></li>
+              <li><%= link_to "The Big Idea", idea_path %></li>
+              <li><%= link_to "For Creators", idea_path %></li>
+              <li><%= link_to "For Consumers", idea_path %></li>
+              <li><%= link_to "The Public Good", idea_path %></li>
             </ul>
           </div>
           <div class="col-md-2">
             <h3>Platform</h3>
             <ul>
-            <li><%= link_to "Technology", platform_path %></li>
-            <li><%= link_to "FAQ", platform_path %></li>
+              <li><%= link_to "How It Works", platform_path %></li>
+              <li><%= link_to "The Technology", platform_path %></li>
+              <li><%= link_to "FAQ", platform_path %></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h3>Organization</h3>
+            <ul>
+              <li><%= link_to "Who We Are", about_path %></li>
+              <li><%= link_to "Mission Statement", about_path %></li>
+              <li><%= link_to "Board of Directors", about_path %></li>
+              <li><%= link_to "Public Documents", about_path %></li>
+              <li><%= link_to "Contact Us", about_path %></li>
             </ul>
           </div>
           <div class="col-md-2">
             <h3>Support</h3>
             <ul>
-            <li><%= link_to "Join Us", join_path %></li>
+            <li><%= link_to "Join the Movement", join_path %></li>
+            <li><%= link_to "Support Us", support_path %></li>
             <li><%= link_to "Donate", support_path %></li>
-            <li><%= link_to "Merch", support_path %></li>
+            <li><%= link_to "Merchandise", support_path %></li>
             </ul>
           </div>
         </div>
