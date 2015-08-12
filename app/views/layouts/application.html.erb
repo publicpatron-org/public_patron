@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://s3.amazonaws.com/public-patron/key.jpg">
+    <link rel="icon" href="https://s3.amazonaws.com/public-patron/key.ico">
 
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -21,10 +21,6 @@
     <link href="jumbotron.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -34,71 +30,31 @@
   </head>
   <body>
 
-    <header class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+          <%= link_to "PUBLIC PATRON", root_path, :class => "navbar-brand" %>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavigation">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <nav class="collapse navbar-collapse" id="myNavbar">
+        <div class="navbar-collapse collapse" id="mainNavigation">
           <ul class="nav navbar-nav">
             <li class="<%= yield(:nav1) %>"><%= link_to "THE BIG IDEA", idea_path %></li>
             <li class="<%= yield(:nav2) %>"><%= link_to "HOW IT WORKS", platform_path %></li>
             <li class="<%= yield(:nav3) %>"><%= link_to "WHO WE ARE", about_path %></li>
-            <li class="<%= yield(:nav4) %>"><%= link_to "JOIN THE MOVEMENT", join_path %></li>
-            <li class="<%= yield(:nav5) %>"><%= link_to "SUPPORT US", support_path %></li>
-            <!--
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-            -->
+            <li class="<%= yield(:nav4) %>"><%= link_to "SUPPORT US", support_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "SIGN UP", join_path %></li>
+            <li><%= link_to "JOIN US", join_path %></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           </ul>
-
-          <!--
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" placeholder="Your Email Here" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-default">Get Updates</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          -->
-        </nav><!--/.navbar-collapse -->
+        </div>
       </div><!-- /.container -->
-    </header>
+    </nav><!--/.navbar-collapse -->
 
     <%= yield %>
 

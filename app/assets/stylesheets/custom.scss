@@ -68,3 +68,31 @@ p {
   background-color: red;
   color: #ffffff;
 }
+
+@media (max-width: 500px)
+{
+  .jumbotron {
+    img {
+      width: 100%;
+      margin: 35px 0px 10px 0px;
+    }
+    h1 {
+      padding: 0px;
+      font-size: 2.5em;
+      text-align: justify;
+      margin: 40px 0px 0px 0px;
+      .jumbotext1 { font-size: .8em; }
+      .jumbotext2 { font-size: .8em; }
+    }
+  }
+  .container .details {
+    padding-bottom: 15px;
+  }
+  #footer {
+    padding: 15px 0px 20px 0px;
+    img {
+      margin: 10px 10px 10px 10px;
+      width: 90%; 
+    }
+  }
+}
