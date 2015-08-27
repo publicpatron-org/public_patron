@@ -1,18 +1,27 @@
 <% provide(:title, "Join the Movement") %>
-<% provide(:nav4, "active") %>
 
-<div class="container">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-md-6 col-md-offset-3">
       <h1>Join the Movement</h1>
-      <p>Please create an account, set up a monthly donation and download our app.</p>
-      <p>Find me in app/views/users/new.html.erb</p>
+      <p>Step 1: Create an account.</p>
+
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
+      
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <% end %>
     </div>
-    <div class="col-sm-4"></div>
-  </div><!-- /.row -->
+  </div>
   <hr>
-</div> <!-- /container -->
-
-<%= render 'layouts/footer' %>
-
-<%= render 'layouts/endJS' %>

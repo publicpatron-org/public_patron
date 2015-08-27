@@ -9,7 +9,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", idea_path, count: 8
     assert_select "a[href=?]", platform_path, count: 4
     assert_select "a[href=?]", about_path, count: 6
-    assert_select "a[href=?]", join_path, count: 2
+    assert_select "a[href=?]", signup_path, count: 2
     assert_select "a[href=?]", support_path, count: 4
     get signup_path
   end

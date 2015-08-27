@@ -5,6 +5,6 @@
        var footerTop = $('#footer').position().top + footerHeight;
 
        if (footerTop < docHeight) {
-        $('#footer').css('margin-top', -35+ (docHeight - footerTop) + 'px');
+        $('#footerx').css('margin-top', -35+ (docHeight - footerTop) + 'px');
        }
       });

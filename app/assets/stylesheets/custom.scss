@@ -1,52 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$test-color: #777;
+html {
+  position: relative;
+  min-height: 100%;
+}
 
-$navbar-inverse-link-active-bg: darken($navbar-inverse-bg, 0%);
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 250px;
+}
 
 p {
   font-size: 16px;
   line-height: 1.8;
 }
 
-.img-responsive { width: 100% \9; }
-
-.jumbotron {
-  background-color: #000000;
-  img {
-    float: left;
-    width: 60%;
-    margin: 20px 50px 0px 0px;
-  }
-  h1 {
-    padding: 0px;
-    color: #e0e0e0;
-    font-size: 3.1em;
-    text-align: justify;
-    margin: 70px 30px 0px 0px;
-    .jumbotext1 {
-      font-size: .85em;
-    }
-    .jumbotext2 {
-      font-size: .81em;
-    }
-  }
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0;
 }
 
-.container .details {
-  padding-bottom: 310px;
-}
-
-.container .row {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-
-#footer {
+.footer {
   background-color: #222222;
   color: #ffffff;
-  padding: 15px 0px 20px 0px;
+  padding: 15px 0px 15px 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 250px;
   img {
     margin: 30px 20px 30px 10px;
     width: 80%; 
@@ -62,6 +45,34 @@ p {
   } 
 }
 
+.img-responsive { width: 100% \9; }
+
+.jumbotron {
+  background-color: #000000;
+  img {
+    float: left;
+    width: 60%;
+    margin: 0px 50px 0px 0px;
+  }
+  h1 {
+    padding: 0px;
+    color: #e0e0e0;
+    font-size: 3.1em;
+    text-align: justify;
+    margin: 50px 30px 0px 0px;
+    .jumbotext1 {
+      font-size: .85em;
+    }
+    .jumbotext2 {
+      font-size: .81em;
+    }
+  }
+}
+
+.container .details {
+  padding-bottom: 310px;
+}
+
 .detailBox {
   padding: 10px;
   margin: 30px;
@@ -69,8 +80,14 @@ p {
   color: #ffffff;
 }
 
+/* Mobile device styles
+-------------------------------------------------- */
 @media (max-width: 500px)
 {
+  body {
+  /* Margin bottom by footer height */
+  margin-bottom: 1000px;
+  }
   .jumbotron {
     img {
       width: 100%;
@@ -81,18 +98,67 @@ p {
       font-size: 2.5em;
       text-align: justify;
       margin: 40px 0px 0px 0px;
-      .jumbotext1 { font-size: .8em; }
-      .jumbotext2 { font-size: .8em; }
+      .jumbotext1 { font-size: .85em; }
+      .jumbotext2 { font-size: .81em; }
     }
   }
   .container .details {
     padding-bottom: 15px;
   }
-  #footer {
-    padding: 15px 0px 20px 0px;
+  .footer {
+    /* Set the fixed height of the footer here */
+    height: 1000px;
     img {
       margin: 10px 10px 10px 10px;
       width: 90%; 
     }
+  }
+}
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
   }
 }
