@@ -50,7 +50,24 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "JOIN US", signup_path %></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+            <% if logged_in? %>
+              <li><%= link_to "Users", '#' %></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Account <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Settings", '#' %></li>
+                  <li class="divider"></li>
+                  <li>
+                    <%= link_to "Log out", logout_path, method: "delete" %>
+                  </li>
+                </ul>
+              </li>
+            <% else %>
+              <li><%= link_to "LOG IN", login_path %></li>
+            <% end %>
+
           </ul>
         </div>
       </div><!-- /.container -->
@@ -61,7 +78,7 @@
       <div class="jumbotron">
         <div class="container">
           <img src="https://s3.amazonaws.com/public-patron/LOGO-PNG3.png" class="img-responsive" alt="Responsive image"> 
-          <h1>A MOVEMENT TO FREE CULTURE + <span class="jumbotext1">DISRUPT BIG MEDIA</span> BY SUPPORTING <span class="jumbotext2">CREATORS DIRECTLY</span></h1>
+          <h1>THE KEY TO A<br><span class="jumbotext1">FREE CULTURE</span><br><span class="jumbotext2">IS SHARING</span><br><span class="jumbotext3">THE COST OF OUR</span><br><span class="jumbotext4">ATTENTION</span></h1>
           <!-- <p><a class="btn btn-primary btn-lg" href="about" role="button">Learn more &raquo;</a></p> -->
         </div>
       </div>
